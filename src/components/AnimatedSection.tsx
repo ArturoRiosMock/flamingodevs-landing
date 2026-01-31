@@ -1,7 +1,7 @@
 "use client";
 
+import React, { ReactNode } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ReactNode } from "react";
 
 type AnimationType = 
   | "fade-up" 
@@ -18,7 +18,7 @@ interface AnimatedSectionProps {
   duration?: number;
   className?: string;
   threshold?: number;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
 }
 
 const animationStyles: Record<AnimationType, { initial: string; visible: string }> = {
