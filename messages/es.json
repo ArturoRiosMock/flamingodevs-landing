@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "Desarrollo Web y Automatización con IA | Flamingo Devs",
+    "description": "Desarrollo web profesional, tiendas online Shopify y automatización con IA. Especialista en WordPress, Next.js y e-commerce. Shopify Partner certificado. Consultoría personalizada worldwide.",
+    "keywords": "desarrollo web, tienda online, Shopify, automatización, inteligencia artificial, WordPress, Next.js, e-commerce, desarrollador freelance, consultoría IA"
+  },
+  "header": {
+    "services": "Servicios",
+    "about": "Sobre Mí",
+    "portfolio": "Portafolio",
+    "contact": "Contacto",
+    "hireCta": "Contrátame"
+  },
+  "hero": {
+    "headline": "Consultoría en IA y Desarrollo Web Que Escala Tu Negocio",
+    "subheadline": "Soluciones a medida que combinan inteligencia artificial con tecnologías web modernas. Desde e-commerce hasta plataformas personalizadas, entrego resultados.",
+    "cta": "Contactar",
+    "ctaSecondary": "Ver Mi Trabajo"
+  },
+  "services": {
+    "title": "Qué Hago",
+    "subtitle": "Servicios especializados para transformar tu presencia digital",
+    "items": {
+      "ai": {
+        "title": "Consultoría en IA",
+        "description": "Implementación estratégica de soluciones de IA para automatizar procesos y mejorar la toma de decisiones."
+      },
+      "shopify": {
+        "title": "Desarrollo Shopify",
+        "description": "Temas y apps personalizados de Shopify como Partner certificado. E-commerce que convierte."
+      },
+      "wordpress": {
+        "title": "Desarrollo WordPress",
+        "description": "Sitios WordPress de alto rendimiento con temas y plugins personalizados a tu medida."
+      },
+      "nextjs": {
+        "title": "Next.js y Node.js",
+        "description": "Aplicaciones web modernas con React, Next.js y Node.js para rendimiento escalable."
+      },
+      "analytics": {
+        "title": "Analytics GA4",
+        "description": "Insights basados en datos con implementación y optimización de Google Analytics 4."
+      },
+      "fullstack": {
+        "title": "Desarrollo Full Stack",
+        "description": "Soluciones web completas con experiencia en HTML, CSS, JavaScript y PHP."
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "name": "Christian Rios",
+    "role": "Consultor de IA y Desarrollador Full Stack",
+    "location": "Worldwide",
+    "bio": "Combino experiencia en IA con desarrollo full-stack para crear soluciones que realmente impactan los negocios. Con experiencia en WordPress, Shopify, Next.js y más, aporto una perspectiva única que conecta la IA de vanguardia con el desarrollo web práctico.",
+    "bio2": "Mi enfoque es a medida: primero entiendo tus objetivos, luego creo el stack tecnológico adecuado para alcanzarlos. Ya sea que necesites una automatización con IA, una tienda e-commerce de alta conversión o una aplicación web personalizada, entrego calidad con ejecución rápida."
+  },
+  "portfolio": {
+    "title": "Trabajo Destacado",
+    "subtitle": "Proyectos que muestran mi experiencia",
+    "viewProject": "Ver Proyecto",
+    "items": {
+      "ecommerce": {
+        "title": "Soluciones E-commerce",
+        "description": "Tiendas Shopify personalizadas optimizadas para conversión",
+        "stack": "Shopify, Liquid, JavaScript"
+      },
+      "webapps": {
+        "title": "Aplicaciones Web",
+        "description": "Aplicaciones modernas y escalables construidas con Next.js",
+        "stack": "Next.js, React, Node.js"
+      },
+      "wordpress": {
+        "title": "Sitios WordPress",
+        "description": "WordPress de alto rendimiento con funcionalidad personalizada",
+        "stack": "WordPress, PHP, JavaScript"
+      },
+      "ai": {
+        "title": "Integraciones de IA",
+        "description": "Automatización inteligente y funciones potenciadas por IA",
+        "stack": "IA/ML, Integración API, Node.js"
+      }
+    }
+  },
+  "trust": {
+    "title": "Por Qué Trabajar Conmigo",
+    "shopifyPartner": "Shopify Partner",
+    "certifiedDev": "Desarrollador Certificado",
+    "experience": "Años de Experiencia",
+    "projects": "Proyectos Entregados",
+    "clients": "Clientes Satisfechos"
+  },
+  "contact": {
+    "title": "Construyamos Algo Grande",
+    "subtitle": "¿Tienes un proyecto en mente? Hablemos de cómo puedo ayudarte a hacer realidad tu visión.",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Email",
+      "service": "¿Qué servicio necesitas?",
+      "otherService": "Otro",
+      "budget": "Presupuesto estimado",
+      "selectBudget": "Selecciona un rango",
+      "budgetOptions": {
+        "less1k": "Menos de $1,000",
+        "1k5k": "$1,000 - $5,000",
+        "5k10k": "$5,000 - $10,000",
+        "10kplus": "Más de $10,000",
+        "notSure": "No estoy seguro"
+      },
+      "message": "Cuéntame sobre tu proyecto",
+      "messagePlaceholder": "Describe brevemente tu proyecto, objetivos y cualquier detalle relevante...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito! Te responderé pronto.",
+      "error": "Algo salió mal. Por favor intenta de nuevo."
+    },
+    "directContact": "O contáctame directamente",
+    "phone": "Teléfono",
+    "email": "Email"
+  },
+  "footer": {
+    "copyright": "© {year} Flamingo Devs. Todos los derechos reservados.",
+    "madeWith": "Hecho con propósito, worldwide"
+  },
+  "chat": {
+    "title": "Flamingo Assistant",
+    "subtitle": "Respondo al instante",
+    "openChat": "Abrir chat",
+    "closeChat": "Cerrar chat",
+    "placeholder": "Escribe tu mensaje...",
+    "welcomeTitle": "¡Hola! ¿En qué puedo ayudarte?",
+    "welcomeMessage": "Pregúntame sobre los servicios de Christian",
+    "errorMessage": "Lo siento, hubo un error. Por favor intenta de nuevo."
+  }
+}

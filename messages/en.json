@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "Web Development & AI Automation | Flamingo Devs",
+    "description": "Professional web development, Shopify online stores, and AI automation solutions. WordPress, Next.js, and e-commerce specialist. Certified Shopify Partner. Worldwide consulting services.",
+    "keywords": "web development, online store, Shopify, automation, artificial intelligence, WordPress, Next.js, e-commerce, freelance developer, AI consulting"
+  },
+  "header": {
+    "services": "Services",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "hireCta": "Hire Me"
+  },
+  "hero": {
+    "headline": "AI Consulting & Web Development That Scales Your Business",
+    "subheadline": "Purpose-built solutions combining artificial intelligence with modern web technologies. From e-commerce to custom platforms, I deliver results.",
+    "cta": "Get in Touch",
+    "ctaSecondary": "View My Work"
+  },
+  "services": {
+    "title": "What I Do",
+    "subtitle": "Specialized services to transform your digital presence",
+    "items": {
+      "ai": {
+        "title": "AI Consulting",
+        "description": "Strategic implementation of AI solutions to automate processes and enhance decision-making."
+      },
+      "shopify": {
+        "title": "Shopify Development",
+        "description": "Custom Shopify themes and apps as a certified Shopify Partner. E-commerce that converts."
+      },
+      "wordpress": {
+        "title": "WordPress Development",
+        "description": "High-performance WordPress sites with custom themes and plugins tailored to your needs."
+      },
+      "nextjs": {
+        "title": "Next.js & Node.js",
+        "description": "Modern web applications with React, Next.js, and Node.js for scalable performance."
+      },
+      "analytics": {
+        "title": "GA4 Analytics",
+        "description": "Data-driven insights with Google Analytics 4 implementation and optimization."
+      },
+      "fullstack": {
+        "title": "Full Stack Development",
+        "description": "End-to-end web solutions with HTML, CSS, JavaScript, and PHP expertise."
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "name": "Christian Rios",
+    "role": "AI Consultant & Full Stack Developer",
+    "location": "Worldwide",
+    "bio": "I combine AI expertise with full-stack development to create solutions that truly impact businesses. With experience across WordPress, Shopify, Next.js, and more, I bring a unique perspective that bridges cutting-edge AI with practical web development.",
+    "bio2": "My approach is purpose-built: understanding your goals first, then crafting the right technology stack to achieve them. Whether you need an AI-powered automation, a high-converting e-commerce store, or a custom web application, I deliver quality craft with fast execution."
+  },
+  "portfolio": {
+    "title": "Featured Work",
+    "subtitle": "Projects that showcase my expertise",
+    "viewProject": "View Project",
+    "items": {
+      "ecommerce": {
+        "title": "E-commerce Solutions",
+        "description": "Custom Shopify stores optimized for conversion",
+        "stack": "Shopify, Liquid, JavaScript"
+      },
+      "webapps": {
+        "title": "Web Applications",
+        "description": "Modern, scalable applications built with Next.js",
+        "stack": "Next.js, React, Node.js"
+      },
+      "wordpress": {
+        "title": "WordPress Sites",
+        "description": "High-performance WordPress with custom functionality",
+        "stack": "WordPress, PHP, JavaScript"
+      },
+      "ai": {
+        "title": "AI Integrations",
+        "description": "Intelligent automation and AI-powered features",
+        "stack": "AI/ML, API Integration, Node.js"
+      }
+    }
+  },
+  "trust": {
+    "title": "Why Work With Me",
+    "shopifyPartner": "Shopify Partner",
+    "certifiedDev": "Certified Developer",
+    "experience": "Years of Experience",
+    "projects": "Projects Delivered",
+    "clients": "Happy Clients"
+  },
+  "contact": {
+    "title": "Let's Build Something Great",
+    "subtitle": "Have a project in mind? Let's discuss how I can help bring your vision to life.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "service": "What service do you need?",
+      "otherService": "Other",
+      "budget": "Estimated budget",
+      "selectBudget": "Select a range",
+      "budgetOptions": {
+        "less1k": "Less than $1,000",
+        "1k5k": "$1,000 - $5,000",
+        "5k10k": "$5,000 - $10,000",
+        "10kplus": "More than $10,000",
+        "notSure": "Not sure yet"
+      },
+      "message": "Tell me about your project",
+      "messagePlaceholder": "Briefly describe your project, goals, and any relevant details...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "directContact": "Or contact me directly",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "footer": {
+    "copyright": "© {year} Flamingo Devs. All rights reserved.",
+    "madeWith": "Made with purpose, worldwide"
+  },
+  "chat": {
+    "title": "Flamingo Assistant",
+    "subtitle": "Instant responses",
+    "openChat": "Open chat",
+    "closeChat": "Close chat",
+    "placeholder": "Type your message...",
+    "welcomeTitle": "Hi! How can I help you?",
+    "welcomeMessage": "Ask me about Christian's services",
+    "errorMessage": "Sorry, there was an error. Please try again."
+  }
+}
