@@ -11,23 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   locales.forEach((locale) => {
-    // Main page for each locale
+    // Main page for each locale (Google no indexa fragmentos # en sitemaps)
     sitemapEntries.push({
       url: `${BASE_URL}/${locale}`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 1.0,
-    });
-
-    // Section anchors for each locale (helps with deep linking SEO)
-    const sections = ['services', 'about', 'portfolio', 'contact'];
-    sections.forEach((section) => {
-      sitemapEntries.push({
-        url: `${BASE_URL}/${locale}#${section}`,
-        lastModified,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-      });
     });
 
     // Blog index page
