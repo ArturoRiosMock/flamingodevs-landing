@@ -74,7 +74,7 @@ export default function StructuredData({ locale }: StructuredDataProps) {
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+55-48-99618-5443",
+      telephone: "+55-48-9806-8513",
       contactType: "customer service",
       email: "info@flamingodevs.com",
       availableLanguage: ["English", "Spanish", "Portuguese"],

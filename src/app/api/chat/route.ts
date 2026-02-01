@@ -30,7 +30,7 @@ INFORMACIÓN SOBRE CHRISTIAN RIOS / FLAMINGO DEVS:
 - Analytics: Google Analytics 4
 
 **Información de contacto:**
-- Teléfono/WhatsApp: +55 48 99618-5443
+- Teléfono/WhatsApp: +55 48 9806-8513
 - Email: info@flamingodevs.com
 - GitHub: github.com/ArturoRiosMock
 - LinkedIn: linkedin.com/in/christian-mock-a5349515b
