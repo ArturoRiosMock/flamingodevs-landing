@@ -86,9 +86,7 @@ export default function Header() {
                 <LanguageSwitcher />
               </div>
               <a
-                href="https://calendly.com/mockraw/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition-all hover:scale-105 ${
                   scrolled
                     ? "bg-foreground text-background hover:bg-foreground/90"
@@ -203,9 +201,7 @@ export default function Header() {
               <LanguageSwitcher />
             </div>
             <a
-              href="https://calendly.com/mockraw/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="flex items-center justify-center gap-2 w-full rounded-full bg-foreground text-background px-6 py-3 text-base font-medium transition-all hover:bg-foreground/90 hover:scale-[1.02]"
               onClick={() => setMobileMenuOpen(false)}
             >

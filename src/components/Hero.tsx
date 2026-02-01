@@ -66,9 +66,7 @@ export default function Hero() {
           style={{ transitionDelay: "800ms" }}
         >
           <a
-            href="https://calendly.com/mockraw/30min"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="group relative inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-base font-semibold text-[#212121] transition-all duration-300 hover:scale-105 shadow-lg shadow-black/20 overflow-hidden"
           >
             {/* Shine effect */}
