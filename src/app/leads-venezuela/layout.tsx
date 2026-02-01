@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://flamingodevs.com"),
   title: "Crea Tu Tienda Online | Flamingo Devs Venezuela",
   description: "Responde unas preguntas rápidas para ver si podemos ayudarte a crear tu tienda online profesional. Servicio especializado para emprendedores en Venezuela.",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
   robots: {
     index: false,
     follow: false,

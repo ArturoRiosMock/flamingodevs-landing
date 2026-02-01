@@ -40,6 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     authors: [{ name: "Christian Rios", url: BASE_URL }],
     creator: "Christian Rios",
     publisher: "Flamingo Devs",
+    icons: {
+      icon: "/logo.svg",
+      shortcut: "/logo.svg",
+      apple: "/logo.svg",
+    },
     robots: {
       index: true,
       follow: true,
