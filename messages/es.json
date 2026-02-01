@@ -152,5 +152,242 @@
     "author": "Autor",
     "publishedOn": "Publicado el",
     "backToBlog": "Volver al blog"
+  },
+  "venezuelaServices": {
+    "metadata": {
+      "title": "Páginas Web para Negocios en Venezuela | Flamingo Devs",
+      "description": "Máquinas de ventas digitales para tu negocio en Venezuela. Catálogos, tiendas online y automatización. Precios en USD, entrega rápida, soporte mensual."
+    },
+    "hero": {
+      "badge": "Servicios para Venezuela",
+      "title": "No vendemos páginas web.",
+      "titleHighlight": "Vendemos máquinas de ventas.",
+      "subtitle": "Tu negocio atendiendo clientes 24/7, sin que el mensaje se pierda en WhatsApp. Precios transparentes, entrega rápida y soporte continuo.",
+      "cta": "Ver Paquetes",
+      "ctaSecondary": "Hablar por WhatsApp"
+    },
+    "problems": {
+      "title": "¿Te suena familiar?",
+      "items": {
+        "messages": {
+          "title": "100 mensajes al día preguntando precios",
+          "description": "Tu WhatsApp colapsado respondiendo lo mismo una y otra vez."
+        },
+        "instagram": {
+          "title": "Solo tienes Instagram",
+          "description": "Ser buhonero digital. Si te hackean, pierdes todo."
+        },
+        "inventory": {
+          "title": "Inventario en la cabeza",
+          "description": "Sin control de stock ni registro de ventas automatizado."
+        },
+        "payments": {
+          "title": "Cobras manual",
+          "description": "Esperando capturas de Pago Móvil y Zelle todo el día."
+        }
+      }
+    },
+    "packs": {
+      "title": "Elige tu Pack",
+      "subtitle": "3 soluciones diseñadas para negocios venezolanos. Sin sorpresas, sin letra pequeña.",
+      "popular": "Más Popular",
+      "cta": "Contratar Ahora",
+      "includes": "Incluye",
+      "delivery": "Entrega",
+      "days": "días",
+      "maintenance": "Mantenimiento",
+      "month": "mes",
+      "setupFee": "Pago único",
+      "pack1": {
+        "name": "Catálogo Express",
+        "tagline": "El Rompehielo",
+        "idealFor": "Repuestos, Ropa pequeña, Ferreterías",
+        "painSolved": "Me preguntan precio 100 veces al día",
+        "priceFrom": "250",
+        "priceTo": "350",
+        "deliveryDays": "5-7",
+        "maintenancePrice": "25-30",
+        "features": [
+          "Landing Page (Home + Quienes Somos)",
+          "Catálogo de hasta 50 productos",
+          "Buscador rápido de productos",
+          "Botón 'Pedir por WhatsApp' (pedido formateado)",
+          "Diseño responsive (móvil y PC)",
+          "Hosting y dominio incluido primer año"
+        ]
+      },
+      "pack2": {
+        "name": "E-commerce Pro",
+        "tagline": "La Tienda Real",
+        "idealFor": "Tiendas de ropa grandes, Tecnología",
+        "painSolved": "Quiero cobrar automático y controlar inventario",
+        "priceFrom": "500",
+        "priceTo": "700",
+        "deliveryDays": "15-20",
+        "maintenancePrice": "40-50",
+        "features": [
+          "Todo lo del Pack Catálogo Express",
+          "Carrito de compras real",
+          "Pago Móvil / Zelle (verificación manual)",
+          "Pasarelas internacionales (PayPal, Stripe)",
+          "Gestión de inventario automática",
+          "Hasta 100 productos cargados",
+          "Pixel de Facebook para ads"
+        ]
+      },
+      "pack3": {
+        "name": "Automatización Total",
+        "tagline": "High Ticket",
+        "idealFor": "Concesionarios, Importadoras, Negocios grandes",
+        "painSolved": "Necesito CRM, correos automáticos y funnels",
+        "priceFrom": "900",
+        "priceTo": "1200",
+        "deliveryDays": "30",
+        "maintenancePrice": "80",
+        "features": [
+          "Todo lo del Pack E-commerce Pro",
+          "Email Marketing automatizado",
+          "Recuperación de carritos abandonados",
+          "Chatbot para filtrar preguntas frecuentes",
+          "Integración con CRM",
+          "Funnels de venta personalizados",
+          "Soporte prioritario"
+        ]
+      }
+    },
+    "value": {
+      "title": "¿Por qué necesitas una web?",
+      "items": {
+        "centralization": {
+          "title": "Centralización",
+          "description": "Deja de perder ventas porque el mensaje quedó abajo en WhatsApp. La web atiende 24/7."
+        },
+        "professionalism": {
+          "title": "Profesionalismo",
+          "description": "Tener solo Instagram es como ser buhonero digital. Tener .com es tener local propio."
+        },
+        "security": {
+          "title": "Blindaje",
+          "description": "¿Qué pasa si mañana te hackean el Instagram? Pierdes todos los clientes. La web es tuya."
+        },
+        "automation": {
+          "title": "Automatización",
+          "description": "Tu negocio trabajando mientras duermes. Pedidos, pagos y notificaciones automáticas."
+        }
+      }
+    },
+    "process": {
+      "title": "¿Cómo trabajamos?",
+      "subtitle": "Proceso claro y rápido. Sin vueltas.",
+      "steps": {
+        "step1": {
+          "day": "Día 1",
+          "title": "Cierre y Pago",
+          "description": "Conversamos, elegimos el pack y pagas el 50% para arrancar."
+        },
+        "step2": {
+          "day": "Día 2",
+          "title": "Recolección",
+          "description": "Te envío un formulario simple: logo, fotos y lista de precios en Excel."
+        },
+        "step3": {
+          "day": "Día 3-5",
+          "title": "Montaje",
+          "description": "Construyo tu web con plantillas profesionales optimizadas."
+        },
+        "step4": {
+          "day": "Día 6",
+          "title": "Revisión",
+          "description": "Una ronda de cambios para ajustar detalles a tu gusto."
+        },
+        "step5": {
+          "day": "Día 7",
+          "title": "Entrega",
+          "description": "Tu web lista y funcionando. Pagas el 50% restante."
+        }
+      }
+    },
+    "maintenance": {
+      "title": "Soporte Mensual",
+      "subtitle": "Tu web siempre funcionando, sin preocupaciones",
+      "description": "El mantenimiento incluye hosting, backups automáticos, actualizaciones de seguridad y soporte técnico. Tú te enfocas en vender, yo me encargo de que todo funcione.",
+      "features": [
+        "Hosting premium incluido",
+        "Backups automáticos semanales",
+        "Actualizaciones de seguridad",
+        "Soporte técnico por WhatsApp",
+        "Cambios menores incluidos"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": {
+        "q1": {
+          "question": "¿Cobran en dólares?",
+          "answer": "Sí, todos los precios están en USD. Aceptamos Zelle, PayPal y transferencias internacionales."
+        },
+        "q2": {
+          "question": "¿Qué pasa si no tengo fotos profesionales?",
+          "answer": "Te guío para que tomes buenas fotos con tu celular. También puedo usar imágenes de stock si es necesario."
+        },
+        "q3": {
+          "question": "¿El mantenimiento es obligatorio?",
+          "answer": "No es obligatorio, pero altamente recomendado. Sin mantenimiento, tú te encargas del hosting y actualizaciones."
+        },
+        "q4": {
+          "question": "¿Puedo agregar más productos después?",
+          "answer": "Sí, el mantenimiento mensual incluye cambios menores. Para cargas masivas se cotiza aparte."
+        },
+        "q5": {
+          "question": "¿Funciona con Pago Móvil?",
+          "answer": "Sí. El cliente hace el pago, sube la captura y tú verificas manualmente antes de procesar."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para tener tu máquina de ventas?",
+      "subtitle": "Escríbeme por WhatsApp y conversamos sobre cuál pack es ideal para tu negocio.",
+      "button": "Escribir por WhatsApp",
+      "note": "Respondo en menos de 24 horas"
+    }
+  },
+  "testimonials": {
+    "badge": "48 clientes satisfechos",
+    "title": "Lo Que Dicen Mis Clientes",
+    "subtitle": "Más de 48 proyectos completados con calificación perfecta en Workana. 9 clientes han vuelto a contratarme.",
+    "stats": {
+      "clients": "Clientes Satisfechos",
+      "rating": "Calificación Promedio",
+      "projects": "Proyectos Completados",
+      "level": "Nivel Workana"
+    },
+    "testimonial1": {
+      "role": "CEO, Agencia Digital",
+      "text": "Tuve un problema crítico con mi portal en WordPress y Christian lo resolvió en tiempo récord, además proponiéndome otras acciones para evitar esto a futuro. ¡Totalmente recomendado!"
+    },
+    "testimonial2": {
+      "role": "Fundador, Tienda Online",
+      "text": "Excelente trabajo con nuestra tienda Shopify. Christian entendió exactamente lo que necesitábamos y entregó antes del plazo. La comunicación fue impecable durante todo el proyecto."
+    },
+    "testimonial3": {
+      "role": "Director de Marketing",
+      "text": "Profesional de alto nivel. Desarrolló nuestro e-commerce con todas las funcionalidades que pedimos y además optimizó el SEO. Las ventas aumentaron un 40% el primer mes."
+    },
+    "testimonial4": {
+      "role": "Emprendedor",
+      "text": "Christian configuró las variantes de producto en nuestra tienda Shopify de manera impecable. Proyecto complejo que manejó con total profesionalismo y rapidez."
+    },
+    "testimonial5": {
+      "role": "Directora de Operaciones",
+      "text": "Trabajamos con Christian en múltiples proyectos. Su conocimiento técnico y capacidad de resolución de problemas son excepcionales. Siempre es mi primera opción."
+    },
+    "testimonial6": {
+      "role": "CTO, Startup Tech",
+      "text": "La automatización que Christian implementó nos ahorra horas de trabajo manual cada semana. Integró perfectamente todas nuestras herramientas con IA y flujos automatizados."
+    },
+    "cta": {
+      "text": "Todas las reseñas verificadas en Workana",
+      "button": "Ver perfil completo en Workana"
+    }
   }
 }

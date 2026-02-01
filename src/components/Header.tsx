@@ -1,15 +1,35 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+// Servicios por país (sin locale, se agrega dinámicamente)
+const servicesByCountry = [
+  {
+    country: "Venezuela",
+    flag: "🇻🇪",
+    path: "/servicios-venezuela",
+    description: "Catálogos, E-commerce y Automatización",
+  },
+  // Agregar más países aquí en el futuro
+  // {
+  //   country: "Colombia",
+  //   flag: "🇨🇴",
+  //   path: "/servicios-colombia",
+  //   description: "Próximamente",
+  // },
+];
+
 export default function Header() {
   const t = useTranslations("header");
+  const locale = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -33,11 +53,9 @@ export default function Header() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { href: "#services", label: t("services") },
-    { href: "#about", label: t("about") },
-    { href: "#portfolio", label: t("portfolio") },
-    { href: "/blog", label: "Blog" },
-    { href: "#contact", label: t("contact") },
+    { href: `/${locale}#about`, label: t("about") },
+    { href: `/${locale}/blog`, label: "Blog" },
+    { href: `/${locale}#contact`, label: t("contact") },
   ];
 
   return (
@@ -61,6 +79,85 @@ export default function Header() {
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
+              {/* Mega Menu - Servicios */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <button
+                  className={`relative text-sm font-medium transition-all duration-300 flex items-center gap-1 ${
+                    scrolled 
+                      ? "text-muted hover:text-foreground" 
+                      : "text-white/70 hover:text-white"
+                  } ${mounted ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}
+                  style={{ transitionDelay: "50ms" }}
+                >
+                  <span>{t("services")}</span>
+                  <svg 
+                    className={`h-4 w-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    strokeWidth="2" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+
+                {/* Dropdown Menu */}
+                <div 
+                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-200 ${
+                    servicesOpen 
+                      ? "opacity-100 translate-y-0 pointer-events-auto" 
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <div className="bg-background/95 backdrop-blur-md rounded-2xl border border-border shadow-xl p-2 min-w-[280px]">
+                    {/* Link a servicios generales */}
+                    <Link
+                      href={`/${locale}#services`}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-muted/10 transition-colors group"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent/20 transition-colors">
+                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-foreground">Todos los Servicios</p>
+                        <p className="text-xs text-muted">IA, Shopify, WordPress, Next.js</p>
+                      </div>
+                    </Link>
+
+                    {/* Separator */}
+                    <div className="h-px bg-border my-2" />
+
+                    {/* Servicios por país */}
+                    <p className="px-4 py-2 text-xs font-medium text-muted uppercase tracking-wider">
+                      Por País
+                    </p>
+                    
+                    {servicesByCountry.map((service) => (
+                      <Link
+                        key={service.path}
+                        href={`/${locale}${service.path}`}
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-muted/10 transition-colors group"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-muted/20 flex items-center justify-center text-2xl group-hover:bg-muted/30 transition-colors">
+                          {service.flag}
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-foreground">{service.country}</p>
+                          <p className="text-xs text-muted">{service.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Regular Nav Links */}
               {navLinks.map((link, index) => {
                 const isInternalRoute = link.href.startsWith('/');
                 const Component = isInternalRoute ? Link : 'a';
@@ -73,7 +170,7 @@ export default function Header() {
                         ? "text-muted hover:text-foreground" 
                         : "text-white/70 hover:text-white"
                     } ${mounted ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}
-                    style={{ transitionDelay: `${(index + 1) * 50}ms` }}
+                    style={{ transitionDelay: `${(index + 2) * 50}ms` }}
                   >
                     <span className="relative">
                       {link.label}
@@ -90,8 +187,8 @@ export default function Header() {
               <div className={scrolled ? "" : "[&_button]:text-white/70 [&_button]:hover:text-white"}>
                 <LanguageSwitcher />
               </div>
-              <a
-                href="#contact"
+              <Link
+                href={`/${locale}#contact`}
                 className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition-all hover:scale-105 ${
                   scrolled
                     ? "bg-foreground text-background hover:bg-foreground/90"
@@ -99,7 +196,7 @@ export default function Header() {
                 }`}
               >
                 {t("hireCta")}
-              </a>
+              </Link>
             </div>
 
             <button
@@ -179,8 +276,68 @@ export default function Header() {
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex-1 px-6 py-8">
+          <nav className="flex-1 px-6 py-8 overflow-y-auto">
             <div className="flex flex-col gap-2">
+              {/* Servicios con submenu */}
+              <div>
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className={`flex items-center justify-between w-full px-4 py-3 text-lg font-medium text-foreground hover:bg-muted/10 rounded-xl transition-all duration-300 ${
+                    mobileMenuOpen 
+                      ? "translate-x-0 opacity-100" 
+                      : "translate-x-8 opacity-0"
+                  }`}
+                  style={{ transitionDelay: "150ms" }}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-accent/50" />
+                    {t("services")}
+                  </div>
+                  <svg 
+                    className={`h-5 w-5 text-muted transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    strokeWidth="2" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+
+                {/* Submenu */}
+                <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="pl-6 pt-2 space-y-1">
+                    <Link
+                      href={`/${locale}#services`}
+                      className="flex items-center gap-3 px-4 py-2.5 text-base text-muted hover:text-foreground hover:bg-muted/10 rounded-lg transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z" />
+                      </svg>
+                      Todos los Servicios
+                    </Link>
+                    
+                    <p className="px-4 py-2 text-xs font-medium text-muted/70 uppercase tracking-wider">
+                      Por País
+                    </p>
+                    
+                    {servicesByCountry.map((service) => (
+                      <Link
+                        key={service.path}
+                        href={`/${locale}${service.path}`}
+                        className="flex items-center gap-3 px-4 py-2.5 text-base text-muted hover:text-foreground hover:bg-muted/10 rounded-lg transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <span className="text-lg">{service.flag}</span>
+                        {service.country}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Other nav links */}
               {navLinks.map((link, index) => {
                 const isInternalRoute = link.href.startsWith('/');
                 const Component = isInternalRoute ? Link : 'a';
@@ -193,7 +350,7 @@ export default function Header() {
                         ? "translate-x-0 opacity-100" 
                         : "translate-x-8 opacity-0"
                     }`}
-                    style={{ transitionDelay: `${150 + index * 50}ms` }}
+                    style={{ transitionDelay: `${200 + index * 50}ms` }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <span className="w-2 h-2 rounded-full bg-accent/50" />
@@ -209,8 +366,8 @@ export default function Header() {
             <div className="flex items-center justify-center">
               <LanguageSwitcher />
             </div>
-            <a
-              href="#contact"
+            <Link
+              href={`/${locale}#contact`}
               className="flex items-center justify-center gap-2 w-full rounded-full bg-foreground text-background px-6 py-3 text-base font-medium transition-all hover:bg-foreground/90 hover:scale-[1.02]"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -218,7 +375,7 @@ export default function Header() {
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
-            </a>
+            </Link>
             
             {/* Social Links */}
             <div className="flex items-center justify-center gap-4 pt-4">

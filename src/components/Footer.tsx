@@ -1,25 +1,25 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 
 export default function Footer() {
   const t = useTranslations("footer");
   const tHeader = useTranslations("header");
+  const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
-    { href: "#services", label: tHeader("services") },
-    { href: "#about", label: tHeader("about") },
-    { href: "#portfolio", label: tHeader("portfolio") },
-    { href: "#contact", label: tHeader("contact") },
+    { href: `/${locale}#services`, label: tHeader("services") },
+    { href: `/${locale}#about`, label: tHeader("about") },
+    { href: `/${locale}#contact`, label: tHeader("contact") },
   ];
 
   return (
     <footer className="bg-card border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <Link href="/" className="group flex items-center gap-2">
+          <Link href={`/${locale}`} className="group flex items-center gap-2">
             <span className="text-xl font-bold text-foreground transition-all duration-300 group-hover:scale-105">
               Flamingo<span className="text-muted group-hover:text-accent transition-colors">Devs</span>
             </span>
@@ -27,14 +27,14 @@ export default function Footer() {
 
           <nav className="flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="relative text-sm text-muted hover:text-foreground transition-colors group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground transition-all duration-300 group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </nav>
 
