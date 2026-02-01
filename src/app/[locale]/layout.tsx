@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/i18n/config";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
 import StructuredData from "@/components/StructuredData";
 // import CursorWrapper from "@/components/CursorWrapper"; // Optional: Enable for custom cursor effect
@@ -103,7 +105,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         <StructuredData locale={locale} />
         <NextIntlClientProvider messages={messages}>
           {/* <CursorWrapper /> */}
+          <Header />
           {children}
+          <Footer />
           <ChatBot />
         </NextIntlClientProvider>
       </body>

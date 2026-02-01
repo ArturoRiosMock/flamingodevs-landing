@@ -131,5 +131,26 @@
     "welcomeTitle": "Hi! How can I help you?",
     "welcomeMessage": "Ask me about Christian's services",
     "errorMessage": "Sorry, there was an error. Please try again."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles about web development, automation and AI",
+    "search": "Search articles...",
+    "allCategories": "All categories",
+    "allTags": "All tags",
+    "readMore": "Read more",
+    "minRead": "min read",
+    "noPostsFound": "No articles found",
+    "noPostsDescription": "Try different filters or search terms",
+    "featuredPosts": "Featured articles",
+    "recentPosts": "Recent articles",
+    "relatedPosts": "Related articles",
+    "tableOfContents": "Table of contents",
+    "shareArticle": "Share article",
+    "categories": "Categories",
+    "tags": "Tags",
+    "author": "Author",
+    "publishedOn": "Published on",
+    "backToBlog": "Back to blog"
   }
 }

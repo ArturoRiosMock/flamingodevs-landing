@@ -36,6 +36,7 @@ export default function Header() {
     { href: "#services", label: t("services") },
     { href: "#about", label: t("about") },
     { href: "#portfolio", label: t("portfolio") },
+    { href: "/blog", label: "Blog" },
     { href: "#contact", label: t("contact") },
   ];
 
@@ -60,25 +61,29 @@ export default function Header() {
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link, index) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={`relative text-sm font-medium transition-all duration-300 ${
-                    scrolled 
-                      ? "text-muted hover:text-foreground" 
-                      : "text-white/70 hover:text-white"
-                  } ${mounted ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}
-                  style={{ transitionDelay: `${(index + 1) * 50}ms` }}
-                >
-                  <span className="relative">
-                    {link.label}
-                    <span className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 ${
-                      scrolled ? "bg-foreground" : "bg-white"
-                    } group-hover:w-full`} />
-                  </span>
-                </a>
-              ))}
+              {navLinks.map((link, index) => {
+                const isInternalRoute = link.href.startsWith('/');
+                const Component = isInternalRoute ? Link : 'a';
+                return (
+                  <Component
+                    key={link.href}
+                    href={link.href}
+                    className={`relative text-sm font-medium transition-all duration-300 ${
+                      scrolled 
+                        ? "text-muted hover:text-foreground" 
+                        : "text-white/70 hover:text-white"
+                    } ${mounted ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}
+                    style={{ transitionDelay: `${(index + 1) * 50}ms` }}
+                  >
+                    <span className="relative">
+                      {link.label}
+                      <span className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 ${
+                        scrolled ? "bg-foreground" : "bg-white"
+                      } group-hover:w-full`} />
+                    </span>
+                  </Component>
+                );
+              })}
             </div>
 
             <div className="hidden md:flex items-center gap-4">
@@ -176,22 +181,26 @@ export default function Header() {
           {/* Navigation Links */}
           <nav className="flex-1 px-6 py-8">
             <div className="flex flex-col gap-2">
-              {navLinks.map((link, index) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={`flex items-center gap-3 px-4 py-3 text-lg font-medium text-foreground hover:bg-muted/10 rounded-xl transition-all duration-300 ${
-                    mobileMenuOpen 
-                      ? "translate-x-0 opacity-100" 
-                      : "translate-x-8 opacity-0"
-                  }`}
-                  style={{ transitionDelay: `${150 + index * 50}ms` }}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span className="w-2 h-2 rounded-full bg-accent/50" />
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link, index) => {
+                const isInternalRoute = link.href.startsWith('/');
+                const Component = isInternalRoute ? Link : 'a';
+                return (
+                  <Component
+                    key={link.href}
+                    href={link.href}
+                    className={`flex items-center gap-3 px-4 py-3 text-lg font-medium text-foreground hover:bg-muted/10 rounded-xl transition-all duration-300 ${
+                      mobileMenuOpen 
+                        ? "translate-x-0 opacity-100" 
+                        : "translate-x-8 opacity-0"
+                    }`}
+                    style={{ transitionDelay: `${150 + index * 50}ms` }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span className="w-2 h-2 rounded-full bg-accent/50" />
+                    {link.label}
+                  </Component>
+                );
+              })}
             </div>
           </nav>
 

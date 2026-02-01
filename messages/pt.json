@@ -131,5 +131,26 @@
     "welcomeTitle": "Olá! Como posso ajudar?",
     "welcomeMessage": "Pergunte sobre os serviços do Christian",
     "errorMessage": "Desculpe, houve um erro. Por favor, tente novamente."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artigos sobre desenvolvimento web, automação e IA",
+    "search": "Buscar artigos...",
+    "allCategories": "Todas as categorias",
+    "allTags": "Todas as tags",
+    "readMore": "Ler mais",
+    "minRead": "min de leitura",
+    "noPostsFound": "Nenhum artigo encontrado",
+    "noPostsDescription": "Tente outros filtros ou termos de busca",
+    "featuredPosts": "Artigos em destaque",
+    "recentPosts": "Artigos recentes",
+    "relatedPosts": "Artigos relacionados",
+    "tableOfContents": "Índice",
+    "shareArticle": "Compartilhar artigo",
+    "categories": "Categorias",
+    "tags": "Tags",
+    "author": "Autor",
+    "publishedOn": "Publicado em",
+    "backToBlog": "Voltar ao blog"
   }
 }

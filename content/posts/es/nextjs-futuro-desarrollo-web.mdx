@@ -1,0 +1,128 @@
+---
+title: "Por Qué Next.js es el Framework que Deberías Aprender en 2026"
+description: "Un análisis profundo de las ventajas de Next.js sobre otros frameworks y por qué las empresas más exitosas lo están adoptando."
+date: "2026-01-20"
+author: "Christian Rios"
+category: "desarrollo-web"
+tags: ["nextjs", "react", "javascript", "desarrollo"]
+featured: false
+draft: false
+---
+
+Cuando empecé a desarrollar webs, PHP dominaba el mundo. Luego vino jQuery, después Angular, React, y ahora Next.js se ha convertido en mi herramienta favorita. Te explico por qué.
+
+## ¿Qué hace especial a Next.js?
+
+Next.js es un framework de React creado por Vercel que resuelve los problemas más comunes del desarrollo web moderno de forma elegante.
+
+### Server-Side Rendering (SSR)
+
+```typescript
+// app/blog/[slug]/page.tsx
+export default async function BlogPost({ params }: { params: { slug: string } }) {
+  const post = await getPost(params.slug);
+  
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <div>{post.content}</div>
+    </article>
+  );
+}
+```
+
+El contenido se renderiza en el servidor, lo que significa:
+- Mejor SEO
+- Carga inicial más rápida
+- Experiencia consistente
+
+### Static Site Generation (SSG)
+
+Para páginas que no cambian frecuentemente, puedes pre-renderizarlas en tiempo de build:
+
+```typescript
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+```
+
+## Comparativa con otros frameworks
+
+| Característica | Next.js | Create React App | Gatsby |
+|---------------|---------|------------------|--------|
+| SSR | ✅ | ❌ | ❌ |
+| SSG | ✅ | ❌ | ✅ |
+| API Routes | ✅ | ❌ | ❌ |
+| ISR | ✅ | ❌ | ❌ |
+| Curva de aprendizaje | Media | Baja | Media |
+
+## El nuevo App Router
+
+Next.js 14+ introdujo el App Router, que cambia fundamentalmente cómo estructuramos nuestras aplicaciones:
+
+### Server Components por defecto
+
+Los componentes ahora son del servidor por defecto, lo que reduce el JavaScript enviado al cliente.
+
+### Layouts anidados
+
+```
+app/
+├── layout.tsx       # Layout raíz
+├── page.tsx         # Página principal
+└── blog/
+    ├── layout.tsx   # Layout del blog
+    └── page.tsx     # Lista de posts
+```
+
+### Streaming y Suspense
+
+```tsx
+import { Suspense } from 'react';
+
+export default function Page() {
+  return (
+    <div>
+      <h1>Mi Dashboard</h1>
+      <Suspense fallback={<Loading />}>
+        <SlowComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
+
+## Casos de uso ideales
+
+1. **E-commerce**: Páginas de producto con SSR para SEO
+2. **Blogs**: Contenido estático con SSG
+3. **Dashboards**: Apps interactivas con Server Components
+4. **Landing pages**: Rendimiento optimizado
+
+## ¿Cuándo NO usar Next.js?
+
+- Apps móviles (usa React Native)
+- Proyectos muy simples de una sola página
+- Si tu equipo no conoce React
+
+## Mi stack favorito con Next.js
+
+- **Styling**: Tailwind CSS
+- **Database**: Supabase o PlanetScale
+- **Auth**: NextAuth.js
+- **Deployment**: Vercel (obviamente)
+- **CMS**: Sanity o Contentful
+
+## Recursos para empezar
+
+1. [Documentación oficial](https://nextjs.org/docs)
+2. [Curso gratuito de Next.js](https://nextjs.org/learn)
+3. [Ejemplos oficiales](https://github.com/vercel/next.js/tree/canary/examples)
+
+---
+
+¿Quieres una aplicación web moderna construida con Next.js? [Contáctame](#contact) y hagamos realidad tu proyecto.

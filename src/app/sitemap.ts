@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getAllPostsMeta } from '@/lib/mdx';
 
 const BASE_URL = 'https://flamingodevs.com';
 
@@ -26,6 +27,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified,
         changeFrequency: 'monthly',
         priority: 0.8,
+      });
+    });
+
+    // Blog index page
+    sitemapEntries.push({
+      url: `${BASE_URL}/${locale}/blog`,
+      lastModified,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    });
+
+    // Blog posts
+    const posts = getAllPostsMeta(locale);
+    posts.forEach((post) => {
+      sitemapEntries.push({
+        url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+        lastModified: new Date(post.frontmatter.date),
+        changeFrequency: 'monthly',
+        priority: 0.7,
       });
     });
   });
