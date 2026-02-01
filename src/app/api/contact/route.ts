@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
 
     // Send email via Resend
     const { error } = await resend.emails.send({
-      from: "Flamingo Devs <onboarding@resend.dev>",
+      from: "Flamingo Devs <contact@flamingodevs.com>",
       to: ["info@flamingodevs.com"],
       replyTo: email,
       subject: `Nuevo contacto de ${name} - ${serviceNames[service] || "Sin servicio especificado"}`,
