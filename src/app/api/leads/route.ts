@@ -52,10 +52,18 @@ export async function POST(request: NextRequest) {
     const { name, email, instagram, stage, budget, urgency, qualified } = body;
 
     // Validate required fields
-    if (!name || !email || !stage || !budget || !urgency) {
-      console.error("[Leads API] Missing required fields:", { name: !!name, email: !!email, stage: !!stage, budget: !!budget, urgency: !!urgency });
+    const missingFields = [];
+    if (!name) missingFields.push("name");
+    if (!email) missingFields.push("email");
+    if (!stage) missingFields.push("stage");
+    if (!budget) missingFields.push("budget");
+    if (!urgency) missingFields.push("urgency");
+    
+    if (missingFields.length > 0) {
+      console.error("[Leads API] Missing required fields:", missingFields);
+      console.error("[Leads API] Received values:", { name, email: email ? "***" : undefined, stage, budget, urgency });
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: "Missing required fields", missing: missingFields },
         { status: 400 }
       );
     }

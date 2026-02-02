@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import ProgressBar from "./ProgressBar";
 import FormStep from "./FormStep";
 import SuccessScreen from "./SuccessScreen";
@@ -100,10 +100,21 @@ export default function LeadForm() {
     urgency: "",
   });
 
+  // Ref to always have access to the latest answers (fixes stale closure issue)
+  const answersRef = useRef<Answers>(answers);
+  
+  // Keep the ref in sync with state
+  useEffect(() => {
+    answersRef.current = answers;
+  }, [answers]);
+
   const totalSteps = 6;
 
   const updateAnswer = (field: keyof Answers, value: string) => {
-    setAnswers((prev) => ({ ...prev, [field]: value }));
+    const newAnswers = { ...answers, [field]: value };
+    setAnswers(newAnswers);
+    // Also update the ref immediately to avoid any race conditions
+    answersRef.current = newAnswers;
   };
 
   const nextStep = () => {
@@ -123,16 +134,22 @@ export default function LeadForm() {
   const submitForm = async () => {
     setFormState("loading");
 
-    const qualified = isQualified(answers);
+    // Use the ref to get the latest answers (avoids stale closure issue)
+    const currentAnswers = answersRef.current;
+    const qualified = isQualified(currentAnswers);
+    
+    const payload = {
+      ...currentAnswers,
+      qualified,
+    };
+    
+    console.log("[LeadForm] Submitting payload:", JSON.stringify(payload));
 
     try {
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...answers,
-          qualified,
-        }),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
@@ -164,11 +181,11 @@ export default function LeadForm() {
   }
 
   if (formState === "success") {
-    return <SuccessScreen name={answers.name} email={answers.email} />;
+    return <SuccessScreen name={answersRef.current.name} email={answersRef.current.email} />;
   }
 
   if (formState === "rejected") {
-    return <RejectScreen name={answers.name} />;
+    return <RejectScreen name={answersRef.current.name} />;
   }
 
   return (
