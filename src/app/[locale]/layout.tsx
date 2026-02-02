@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { locales, type Locale } from "@/i18n/config";
 import ChatBot from "@/components/ChatBot";
 import StructuredData from "@/components/StructuredData";
@@ -10,6 +11,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 // import CursorWrapper from "@/components/CursorWrapper"; // Optional: Enable for custom cursor effect
 import "../globals.css";
+
+const GA_MEASUREMENT_ID = "G-R63EL9BGJ3";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -106,6 +109,21 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="scroll-smooth">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <StructuredData locale={locale} />
         <NextIntlClientProvider messages={messages}>
