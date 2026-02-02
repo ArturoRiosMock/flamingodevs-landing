@@ -15,7 +15,7 @@ interface Answers {
   urgency: string;
 }
 
-type FormState = "form" | "loading" | "success" | "rejected";
+type FormState = "form" | "loading" | "success" | "rejected" | "error";
 
 const stageOptions = [
   {
@@ -135,14 +135,19 @@ export default function LeadForm() {
         }),
       });
 
+      const result = await response.json();
+      console.log("[LeadForm] API Response:", result);
+
       if (!response.ok) {
-        throw new Error("Failed to submit");
+        console.error("[LeadForm] API Error:", result);
+        // Still show result to user even if email notification failed
+        // The lead can still proceed with their journey
       }
 
       setFormState(qualified ? "success" : "rejected");
     } catch (error) {
-      console.error("Submit error:", error);
-      // Still show result even if email fails
+      console.error("[LeadForm] Submit error:", error);
+      // Still show result to user - the API call might have failed but we want the UX to continue
       setFormState(qualified ? "success" : "rejected");
     }
   };

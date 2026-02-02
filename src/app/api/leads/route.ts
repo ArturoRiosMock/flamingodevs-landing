@@ -30,23 +30,30 @@ const urgencyLabels: Record<string, string> = {
 };
 
 export async function POST(request: NextRequest) {
+  console.log("[Leads API] Request received");
+  
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.error("RESEND_API_KEY is not configured");
+    console.error("[Leads API] RESEND_API_KEY is not configured");
     return NextResponse.json(
       { error: "Email service not configured" },
       { status: 500 }
     );
   }
+  
+  console.log("[Leads API] API Key found, length:", apiKey.length);
 
   const resend = new Resend(apiKey);
 
   try {
     const body: LeadData = await request.json();
+    console.log("[Leads API] Body received:", JSON.stringify({ ...body, email: "***" }));
+    
     const { name, email, instagram, stage, budget, urgency, qualified } = body;
 
     // Validate required fields
     if (!name || !email || !stage || !budget || !urgency) {
+      console.error("[Leads API] Missing required fields:", { name: !!name, email: !!email, stage: !!stage, budget: !!budget, urgency: !!urgency });
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -56,6 +63,7 @@ export async function POST(request: NextRequest) {
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      console.error("[Leads API] Invalid email format:", email);
       return NextResponse.json(
         { error: "Invalid email format" },
         { status: 400 }
@@ -66,8 +74,10 @@ export async function POST(request: NextRequest) {
     const qualifiedColor = qualified ? "#22c55e" : "#ef4444";
     const qualifiedBg = qualified ? "#dcfce7" : "#fee2e2";
 
+    console.log("[Leads API] Sending email via Resend...");
+    
     // Send email via Resend
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Flamingo Devs <contact@flamingodevs.com>",
       to: ["info@flamingodevs.com"],
       replyTo: email,
@@ -164,21 +174,23 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error("Resend error:", error);
+      console.error("[Leads API] Resend error:", JSON.stringify(error));
       return NextResponse.json(
-        { error: "Failed to send email" },
+        { error: "Failed to send email", details: error.message },
         { status: 500 }
       );
     }
 
+    console.log("[Leads API] Email sent successfully! ID:", data?.id);
+    
     return NextResponse.json(
-      { success: true, message: "Lead registered successfully" },
+      { success: true, message: "Lead registered successfully", emailId: data?.id },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Lead form error:", error);
+    console.error("[Leads API] Lead form error:", error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Internal server error", details: error instanceof Error ? error.message : "Unknown error" },
       { status: 500 }
     );
   }
