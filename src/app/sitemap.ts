@@ -27,6 +27,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     });
 
+    // Tools index page
+    sitemapEntries.push({
+      url: `${BASE_URL}/${locale}/herramientas`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    });
+
+    // Web Analyzer tool
+    sitemapEntries.push({
+      url: `${BASE_URL}/${locale}/herramientas/analizador-web`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
+
+    // Tech Detector tool
+    sitemapEntries.push({
+      url: `${BASE_URL}/${locale}/herramientas/detector-tecnologias`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
+
+    // Store Auditor tool
+    sitemapEntries.push({
+      url: `${BASE_URL}/${locale}/herramientas/auditor-tiendas`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
+
     // Blog posts
     const posts = getAllPostsMeta(locale);
     posts.forEach((post) => {

@@ -9,6 +9,7 @@
     "about": "About",
     "portfolio": "Portfolio",
     "contact": "Contact",
+    "tools": "Tools",
     "hireCta": "Hire Me"
   },
   "hero": {
@@ -349,6 +350,217 @@
       "subtitle": "Message me on WhatsApp and let's talk about which pack is ideal for your business.",
       "button": "Message on WhatsApp",
       "note": "I respond in less than 24 hours"
+    }
+  },
+  "tools": {
+    "metadata": {
+      "title": "Free Tools | Flamingo Devs",
+      "description": "Free tools to optimize your website or online store. Performance analyzer, meta tags generator and more."
+    },
+    "title": "Free Tools",
+    "subtitle": "Optimize your website or online store with our free tools. No registration, no limits.",
+    "comingSoon": "Coming Soon",
+    "useTool": "Use tool",
+    "notifyMe": "Notify me when available",
+    "items": {
+      "analyzer": {
+        "title": "Web Performance Analyzer",
+        "description": "Analyze the speed, SEO, accessibility and best practices of any website."
+      },
+      "techDetector": {
+        "title": "Technology Detector",
+        "description": "Discover what technologies, CMS and frameworks any website uses."
+      },
+      "storeAudit": {
+        "title": "Store Auditor",
+        "description": "Analyze your online store and find out why you're not selling. +40 tests."
+      },
+      "metatags": {
+        "title": "Meta Tags Generator",
+        "description": "Generate optimized meta tags for SEO, Open Graph and Twitter Cards."
+      },
+      "imageConverter": {
+        "title": "Image Converter",
+        "description": "Convert PNG images to JPG, WebP and optimize their size for the web."
+      },
+      "schemaGenerator": {
+        "title": "Schema Generator",
+        "description": "Create Schema.org (JSON-LD) for products, articles and local businesses."
+      }
+    },
+    "cta": {
+      "title": "Need professional help?",
+      "description": "If you want to optimize your website or store comprehensively, I can help you with development, SEO and automation.",
+      "button": "Contact"
+    },
+    "analyzer": {
+      "metadata": {
+        "title": "Free Web Performance Analyzer | Flamingo Devs",
+        "description": "Analyze the speed, SEO, accessibility and best practices of your website or online store. Complete GTmetrix-style report for free.",
+        "keywords": "web analyzer, speed test, lighthouse, core web vitals, free seo, web performance"
+      },
+      "title": "Web Performance Analyzer",
+      "subtitle": "Get a complete report on speed, SEO, accessibility and best practices for any website or online store.",
+      "breadcrumb": {
+        "home": "Home",
+        "tools": "Tools",
+        "analyzer": "Web Analyzer"
+      },
+      "loading": {
+        "title": "Analyzing your site...",
+        "description": "This may take between 15 and 30 seconds"
+      },
+      "error": {
+        "title": "Analysis error",
+        "tryAgain": "Try again"
+      },
+      "errors": {
+        "unexpected": "An unexpected error occurred. Please try again."
+      },
+      "newAnalysis": "New analysis",
+      "info": {
+        "whatMeasures": {
+          "title": "What does the analyzer measure?",
+          "performance": {
+            "title": "Performance",
+            "description": "Loading speed, time to interactive and Core Web Vitals (LCP, CLS, TBT)."
+          },
+          "accessibility": {
+            "title": "Accessibility",
+            "description": "Screen reader compatibility, color contrast and keyboard navigation."
+          },
+          "bestPractices": {
+            "title": "Best Practices",
+            "description": "HTTPS, optimized images, and code without console errors."
+          },
+          "seo": {
+            "title": "SEO",
+            "description": "Meta tags, titles, descriptions and content structure optimized for search engines."
+          }
+        },
+        "whyMatters": {
+          "title": "Why does performance matter?",
+          "description1": "A slow site loses visitors and sales. Google considers speed as a ranking factor, and users expect pages to load in less than 3 seconds.",
+          "description2": "For online stores (Shopify, WordPress, etc.), performance directly impacts conversions. Every second of delay can mean a 7% drop in sales.",
+          "stats": {
+            "title": "Important data:",
+            "item1": "53% of visitors leave if it takes more than 3 seconds",
+            "item2": "1 second less loading = +7% conversions",
+            "item3": "Core Web Vitals affect Google ranking"
+          }
+        }
+      }
+    },
+    "techDetector": {
+      "metadata": {
+        "title": "Free Web Technology Detector | Flamingo Devs",
+        "description": "Discover what technologies any website uses. CMS, frameworks, analytics, hosting and more. Similar to BuiltWith but free.",
+        "keywords": "web technology detector, free builtwith, wappalyzer, what cms uses, detect wordpress shopify"
+      },
+      "title": "Web Technology Detector",
+      "subtitle": "Discover what technologies, frameworks, CMS and tools any website uses.",
+      "breadcrumb": {
+        "home": "Home",
+        "tools": "Tools",
+        "detector": "Technology Detector"
+      },
+      "placeholder": "Enter a URL (e.g., shopify.com)",
+      "detect": "Detect",
+      "analyzing": "Detecting...",
+      "newAnalysis": "New analysis",
+      "loading": {
+        "title": "Analyzing technologies...",
+        "description": "Scanning scripts, headers and site patterns"
+      },
+      "error": {
+        "title": "Detection error",
+        "tryAgain": "Try again"
+      },
+      "errors": {
+        "unexpected": "An unexpected error occurred. Please try again."
+      },
+      "info": {
+        "whatWeDetect": {
+          "title": "What do we detect?",
+          "cms": "CMS (WordPress, Shopify, Wix...)",
+          "frameworks": "Frameworks (React, Vue, Next.js...)",
+          "analytics": "Analytics (Google, Hotjar, Mixpanel...)",
+          "ecommerce": "E-commerce (WooCommerce, Magento...)",
+          "hosting": "Hosting (Vercel, Netlify, AWS...)",
+          "security": "Security (Cloudflare, reCAPTCHA...)"
+        },
+        "useCases": {
+          "title": "What is it for?",
+          "competition": {
+            "title": "Analyze competition",
+            "description": "Discover what technologies your competitors use for inspiration or differentiation."
+          },
+          "learn": {
+            "title": "Learn from the best",
+            "description": "Identify the tools that successful sites in your industry use."
+          },
+          "sales": {
+            "title": "Sales intelligence",
+            "description": "Know your prospects' tech stack before contacting them."
+          }
+        }
+      }
+    },
+    "storeAudit": {
+      "metadata": {
+        "title": "Free Online Store Auditor | Flamingo Devs",
+        "description": "Audit your online store for free. Detect conversion, trust, checkout and SEO issues. Report with recommendations to increase sales.",
+        "keywords": "online store auditor, analyze ecommerce, optimize shopify, improve store conversions, ecommerce problems"
+      },
+      "title": "Online Store Auditor",
+      "subtitle": "Analyze your store and discover why you're not selling. We detect trust, checkout, shipping and more issues. Report with solutions.",
+      "breadcrumb": {
+        "home": "Home",
+        "tools": "Tools",
+        "auditor": "Store Auditor"
+      },
+      "placeholder": "Enter your store URL (e.g., mystore.com)",
+      "audit": "Audit Store",
+      "auditing": "Auditing...",
+      "newAudit": "New audit",
+      "loading": {
+        "title": "Auditing your store...",
+        "description": "Analyzing 10 categories and over 40 critical points"
+      },
+      "error": {
+        "title": "Audit error",
+        "tryAgain": "Try again"
+      },
+      "errors": {
+        "unexpected": "An unexpected error occurred. Please try again."
+      },
+      "info": {
+        "whatWeTest": {
+          "title": "What do we analyze?",
+          "trust": "Trust & Security",
+          "checkout": "Checkout & Conversion",
+          "shipping": "Shipping & Costs",
+          "performance": "Speed & Performance",
+          "products": "Product Presentation",
+          "descriptions": "Product Descriptions",
+          "search": "Internal Search",
+          "urgency": "Urgency & Scarcity",
+          "upselling": "Upselling & Cross-selling",
+          "seo": "Product SEO"
+        },
+        "problems": {
+          "title": "Problems we detect",
+          "cart": "Abandoned cart: Customer leaves just before paying",
+          "checkout": "Endless checkout: Too many steps to complete purchase",
+          "shipping": "Surprise shipping costs that scare away customers",
+          "trust": "Lack of trust: Store looks fake or insecure",
+          "speed": "Slow store: Customers leave before seeing products",
+          "photos": "Bad photos: Can't see detail or real colors"
+        },
+        "platforms": {
+          "title": "Compatible platforms"
+        }
+      }
     }
   },
   "testimonials": {

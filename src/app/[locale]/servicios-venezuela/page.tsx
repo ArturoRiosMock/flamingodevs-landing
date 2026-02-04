@@ -117,7 +117,7 @@ function PackCard({
     }`}>
       {isPopular && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="bg-accent text-white text-sm font-medium px-4 py-1 rounded-full">
+          <span className="bg-accent text-background text-sm font-medium px-4 py-1 rounded-full">
             {t("packs.popular")}
           </span>
         </div>
@@ -191,7 +191,7 @@ function PackCard({
           rel="noopener noreferrer"
           className={`w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold transition-all hover:scale-105 ${
             isPopular 
-              ? "bg-accent text-white hover:bg-accent/90" 
+              ? "bg-accent text-background hover:bg-accent/90" 
               : "bg-foreground text-background hover:bg-foreground/90"
           }`}
         >
@@ -490,7 +490,7 @@ export default function ServiciosVenezuelaPage() {
                     </div>
                     
                     {/* Timeline dot */}
-                    <div className="relative z-10 w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm">
+                    <div className="relative z-10 w-10 h-10 rounded-full bg-accent text-background flex items-center justify-center font-bold text-sm">
                       {idx + 1}
                     </div>
                     

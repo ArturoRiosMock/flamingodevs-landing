@@ -11,6 +11,7 @@ export default function Footer() {
 
   const navLinks = [
     { href: `/${locale}#services`, label: tHeader("services") },
+    { href: `/${locale}/herramientas`, label: tHeader("tools") },
     { href: `/${locale}#about`, label: tHeader("about") },
     { href: `/${locale}#contact`, label: tHeader("contact") },
   ];

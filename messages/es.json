@@ -9,6 +9,7 @@
     "about": "Sobre Mí",
     "portfolio": "Portafolio",
     "contact": "Contacto",
+    "tools": "Herramientas",
     "hireCta": "Contrátame"
   },
   "hero": {
@@ -349,6 +350,217 @@
       "subtitle": "Escríbeme por WhatsApp y conversamos sobre cuál pack es ideal para tu negocio.",
       "button": "Escribir por WhatsApp",
       "note": "Respondo en menos de 24 horas"
+    }
+  },
+  "tools": {
+    "metadata": {
+      "title": "Herramientas Gratuitas | Flamingo Devs",
+      "description": "Herramientas gratuitas para optimizar tu web o tienda online. Analizador de rendimiento, generador de meta tags y más."
+    },
+    "title": "Herramientas Gratuitas",
+    "subtitle": "Optimiza tu web o tienda online con nuestras herramientas gratuitas. Sin registro, sin límites.",
+    "comingSoon": "Próximamente",
+    "useTool": "Usar herramienta",
+    "notifyMe": "Notificarme cuando esté disponible",
+    "items": {
+      "analyzer": {
+        "title": "Analizador de Rendimiento Web",
+        "description": "Analiza la velocidad, SEO, accesibilidad y buenas prácticas de cualquier sitio web."
+      },
+      "techDetector": {
+        "title": "Detector de Tecnologías",
+        "description": "Descubre qué tecnologías, CMS y frameworks usa cualquier sitio web."
+      },
+      "storeAudit": {
+        "title": "Auditor de Tiendas",
+        "description": "Analiza tu tienda online y descubre por qué no vendes. +40 tests."
+      },
+      "metatags": {
+        "title": "Generador de Meta Tags",
+        "description": "Genera meta tags optimizados para SEO, Open Graph y Twitter Cards."
+      },
+      "imageConverter": {
+        "title": "Conversor de Imágenes",
+        "description": "Convierte imágenes PNG a JPG, WebP y optimiza su tamaño para la web."
+      },
+      "schemaGenerator": {
+        "title": "Generador de Schema",
+        "description": "Crea Schema.org (JSON-LD) para productos, artículos y negocios locales."
+      }
+    },
+    "cta": {
+      "title": "¿Necesitas ayuda profesional?",
+      "description": "Si quieres optimizar tu web o tienda de forma integral, puedo ayudarte con desarrollo, SEO y automatización.",
+      "button": "Contactar"
+    },
+    "analyzer": {
+      "metadata": {
+        "title": "Analizador de Rendimiento Web Gratis | Flamingo Devs",
+        "description": "Analiza la velocidad, SEO, accesibilidad y buenas prácticas de tu web o tienda online. Reporte completo tipo GTmetrix gratis.",
+        "keywords": "analizador web, test velocidad, lighthouse, core web vitals, seo gratis, rendimiento web"
+      },
+      "title": "Analizador de Rendimiento Web",
+      "subtitle": "Obtén un reporte completo de velocidad, SEO, accesibilidad y buenas prácticas de cualquier sitio web o tienda online.",
+      "breadcrumb": {
+        "home": "Inicio",
+        "tools": "Herramientas",
+        "analyzer": "Analizador Web"
+      },
+      "loading": {
+        "title": "Analizando tu sitio...",
+        "description": "Esto puede tardar entre 15 y 30 segundos"
+      },
+      "error": {
+        "title": "Error al analizar",
+        "tryAgain": "Intentar de nuevo"
+      },
+      "errors": {
+        "unexpected": "Ocurrió un error inesperado. Por favor intenta de nuevo."
+      },
+      "newAnalysis": "Nuevo análisis",
+      "info": {
+        "whatMeasures": {
+          "title": "¿Qué mide el analizador?",
+          "performance": {
+            "title": "Rendimiento",
+            "description": "Velocidad de carga, tiempo de interacción y Core Web Vitals (LCP, CLS, TBT)."
+          },
+          "accessibility": {
+            "title": "Accesibilidad",
+            "description": "Compatibilidad con lectores de pantalla, contraste de colores y navegación por teclado."
+          },
+          "bestPractices": {
+            "title": "Buenas Prácticas",
+            "description": "HTTPS, imágenes optimizadas, y código sin errores en consola."
+          },
+          "seo": {
+            "title": "SEO",
+            "description": "Meta tags, títulos, descripciones y estructura de contenido optimizada para buscadores."
+          }
+        },
+        "whyMatters": {
+          "title": "¿Por qué importa el rendimiento?",
+          "description1": "Un sitio lento pierde visitantes y ventas. Google considera la velocidad como factor de ranking, y los usuarios esperan que las páginas carguen en menos de 3 segundos.",
+          "description2": "Para tiendas online (Shopify, WordPress, etc.), el rendimiento impacta directamente en las conversiones. Cada segundo de retraso puede significar una caída del 7% en ventas.",
+          "stats": {
+            "title": "Datos importantes:",
+            "item1": "53% de visitantes abandona si tarda más de 3 segundos",
+            "item2": "1 segundo menos de carga = +7% conversiones",
+            "item3": "Core Web Vitals afectan el ranking en Google"
+          }
+        }
+      }
+    },
+    "techDetector": {
+      "metadata": {
+        "title": "Detector de Tecnologías Web Gratis | Flamingo Devs",
+        "description": "Descubre qué tecnologías usa cualquier sitio web. CMS, frameworks, analytics, hosting y más. Similar a BuiltWith pero gratis.",
+        "keywords": "detector tecnologías web, builtwith gratis, wappalyzer, que cms usa, detectar wordpress shopify"
+      },
+      "title": "Detector de Tecnologías Web",
+      "subtitle": "Descubre qué tecnologías, frameworks, CMS y herramientas usa cualquier sitio web.",
+      "breadcrumb": {
+        "home": "Inicio",
+        "tools": "Herramientas",
+        "detector": "Detector de Tecnologías"
+      },
+      "placeholder": "Ingresa una URL (ej: shopify.com)",
+      "detect": "Detectar",
+      "analyzing": "Detectando...",
+      "newAnalysis": "Nuevo análisis",
+      "loading": {
+        "title": "Analizando tecnologías...",
+        "description": "Escaneando scripts, headers y patrones del sitio"
+      },
+      "error": {
+        "title": "Error al detectar",
+        "tryAgain": "Intentar de nuevo"
+      },
+      "errors": {
+        "unexpected": "Ocurrió un error inesperado. Por favor intenta de nuevo."
+      },
+      "info": {
+        "whatWeDetect": {
+          "title": "¿Qué detectamos?",
+          "cms": "CMS (WordPress, Shopify, Wix...)",
+          "frameworks": "Frameworks (React, Vue, Next.js...)",
+          "analytics": "Analytics (Google, Hotjar, Mixpanel...)",
+          "ecommerce": "E-commerce (WooCommerce, Magento...)",
+          "hosting": "Hosting (Vercel, Netlify, AWS...)",
+          "security": "Seguridad (Cloudflare, reCAPTCHA...)"
+        },
+        "useCases": {
+          "title": "¿Para qué sirve?",
+          "competition": {
+            "title": "Analizar la competencia",
+            "description": "Descubre qué tecnologías usan tus competidores para inspirarte o diferenciarte."
+          },
+          "learn": {
+            "title": "Aprender de los mejores",
+            "description": "Identifica las herramientas que usan sitios exitosos en tu industria."
+          },
+          "sales": {
+            "title": "Inteligencia de ventas",
+            "description": "Conoce el stack tecnológico de tus prospectos antes de contactarlos."
+          }
+        }
+      }
+    },
+    "storeAudit": {
+      "metadata": {
+        "title": "Auditor de Tiendas Online Gratis | Flamingo Devs",
+        "description": "Audita tu tienda online gratis. Detecta problemas de conversión, confianza, checkout y SEO. Reporte con recomendaciones para aumentar ventas.",
+        "keywords": "auditor tienda online, analizar ecommerce, optimizar shopify, mejorar conversiones tienda, problemas tienda online"
+      },
+      "title": "Auditor de Tiendas Online",
+      "subtitle": "Analiza tu tienda y descubre por qué no vendes. Detectamos problemas de confianza, checkout, envíos y más. Reporte con soluciones.",
+      "breadcrumb": {
+        "home": "Inicio",
+        "tools": "Herramientas",
+        "auditor": "Auditor de Tiendas"
+      },
+      "placeholder": "Ingresa la URL de tu tienda (ej: mitienda.com)",
+      "audit": "Auditar Tienda",
+      "auditing": "Auditando...",
+      "newAudit": "Nueva auditoría",
+      "loading": {
+        "title": "Auditando tu tienda...",
+        "description": "Analizando 10 categorías y más de 40 puntos críticos"
+      },
+      "error": {
+        "title": "Error al auditar",
+        "tryAgain": "Intentar de nuevo"
+      },
+      "errors": {
+        "unexpected": "Ocurrió un error inesperado. Por favor intenta de nuevo."
+      },
+      "info": {
+        "whatWeTest": {
+          "title": "¿Qué analizamos?",
+          "trust": "Confianza y Seguridad",
+          "checkout": "Checkout y Conversión",
+          "shipping": "Envío y Costos",
+          "performance": "Velocidad y Rendimiento",
+          "products": "Presentación de Productos",
+          "descriptions": "Descripciones de Producto",
+          "search": "Buscador Interno",
+          "urgency": "Urgencia y Escasez",
+          "upselling": "Upselling y Cross-selling",
+          "seo": "SEO de Producto"
+        },
+        "problems": {
+          "title": "Problemas que detectamos",
+          "cart": "Carrito abandonado: El cliente se va justo antes de pagar",
+          "checkout": "Checkout eterno: Demasiados pasos para finalizar",
+          "shipping": "Costos de envío sorpresa que ahuyentan clientes",
+          "trust": "Falta de confianza: La tienda parece fake o insegura",
+          "speed": "Tienda lenta: Los clientes se van antes de ver productos",
+          "photos": "Fotos malas: No se ve el detalle ni los colores reales"
+        },
+        "platforms": {
+          "title": "Plataformas compatibles"
+        }
+      }
     }
   },
   "testimonials": {
